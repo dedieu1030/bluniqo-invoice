@@ -33,110 +33,107 @@ import {
 export const description = "An interactive area chart"
 
 const chartData = [
-  { date: "2024-04-01", desktop: 222, mobile: 150 },
-  { date: "2024-04-02", desktop: 97, mobile: 180 },
-  { date: "2024-04-03", desktop: 167, mobile: 120 },
-  { date: "2024-04-04", desktop: 242, mobile: 260 },
-  { date: "2024-04-05", desktop: 373, mobile: 290 },
-  { date: "2024-04-06", desktop: 301, mobile: 340 },
-  { date: "2024-04-07", desktop: 245, mobile: 180 },
-  { date: "2024-04-08", desktop: 409, mobile: 320 },
-  { date: "2024-04-09", desktop: 59, mobile: 110 },
-  { date: "2024-04-10", desktop: 261, mobile: 190 },
-  { date: "2024-04-11", desktop: 327, mobile: 350 },
-  { date: "2024-04-12", desktop: 292, mobile: 210 },
-  { date: "2024-04-13", desktop: 342, mobile: 380 },
-  { date: "2024-04-14", desktop: 137, mobile: 220 },
-  { date: "2024-04-15", desktop: 120, mobile: 170 },
-  { date: "2024-04-16", desktop: 138, mobile: 190 },
-  { date: "2024-04-17", desktop: 446, mobile: 360 },
-  { date: "2024-04-18", desktop: 364, mobile: 410 },
-  { date: "2024-04-19", desktop: 243, mobile: 180 },
-  { date: "2024-04-20", desktop: 89, mobile: 150 },
-  { date: "2024-04-21", desktop: 137, mobile: 200 },
-  { date: "2024-04-22", desktop: 224, mobile: 170 },
-  { date: "2024-04-23", desktop: 138, mobile: 230 },
-  { date: "2024-04-24", desktop: 387, mobile: 290 },
-  { date: "2024-04-25", desktop: 215, mobile: 250 },
-  { date: "2024-04-26", desktop: 75, mobile: 130 },
-  { date: "2024-04-27", desktop: 383, mobile: 420 },
-  { date: "2024-04-28", desktop: 122, mobile: 180 },
-  { date: "2024-04-29", desktop: 315, mobile: 240 },
-  { date: "2024-04-30", desktop: 454, mobile: 380 },
-  { date: "2024-05-01", desktop: 165, mobile: 220 },
-  { date: "2024-05-02", desktop: 293, mobile: 310 },
-  { date: "2024-05-03", desktop: 247, mobile: 190 },
-  { date: "2024-05-04", desktop: 385, mobile: 420 },
-  { date: "2024-05-05", desktop: 481, mobile: 390 },
-  { date: "2024-05-06", desktop: 498, mobile: 520 },
-  { date: "2024-05-07", desktop: 388, mobile: 300 },
-  { date: "2024-05-08", desktop: 149, mobile: 210 },
-  { date: "2024-05-09", desktop: 227, mobile: 180 },
-  { date: "2024-05-10", desktop: 293, mobile: 330 },
-  { date: "2024-05-11", desktop: 335, mobile: 270 },
-  { date: "2024-05-12", desktop: 197, mobile: 240 },
-  { date: "2024-05-13", desktop: 197, mobile: 160 },
-  { date: "2024-05-14", desktop: 448, mobile: 490 },
-  { date: "2024-05-15", desktop: 473, mobile: 380 },
-  { date: "2024-05-16", desktop: 338, mobile: 400 },
-  { date: "2024-05-17", desktop: 499, mobile: 420 },
-  { date: "2024-05-18", desktop: 315, mobile: 350 },
-  { date: "2024-05-19", desktop: 235, mobile: 180 },
-  { date: "2024-05-20", desktop: 177, mobile: 230 },
-  { date: "2024-05-21", desktop: 82, mobile: 140 },
-  { date: "2024-05-22", desktop: 81, mobile: 120 },
-  { date: "2024-05-23", desktop: 252, mobile: 290 },
-  { date: "2024-05-24", desktop: 294, mobile: 220 },
-  { date: "2024-05-25", desktop: 201, mobile: 250 },
-  { date: "2024-05-26", desktop: 213, mobile: 170 },
-  { date: "2024-05-27", desktop: 420, mobile: 460 },
-  { date: "2024-05-28", desktop: 233, mobile: 190 },
-  { date: "2024-05-29", desktop: 78, mobile: 130 },
-  { date: "2024-05-30", desktop: 340, mobile: 280 },
-  { date: "2024-05-31", desktop: 178, mobile: 230 },
-  { date: "2024-06-01", desktop: 178, mobile: 200 },
-  { date: "2024-06-02", desktop: 470, mobile: 410 },
-  { date: "2024-06-03", desktop: 103, mobile: 160 },
-  { date: "2024-06-04", desktop: 439, mobile: 380 },
-  { date: "2024-06-05", desktop: 88, mobile: 140 },
-  { date: "2024-06-06", desktop: 294, mobile: 250 },
-  { date: "2024-06-07", desktop: 323, mobile: 370 },
-  { date: "2024-06-08", desktop: 385, mobile: 320 },
-  { date: "2024-06-09", desktop: 438, mobile: 480 },
-  { date: "2024-06-10", desktop: 155, mobile: 200 },
-  { date: "2024-06-11", desktop: 92, mobile: 150 },
-  { date: "2024-06-12", desktop: 492, mobile: 420 },
-  { date: "2024-06-13", desktop: 81, mobile: 130 },
-  { date: "2024-06-14", desktop: 426, mobile: 380 },
-  { date: "2024-06-15", desktop: 307, mobile: 350 },
-  { date: "2024-06-16", desktop: 371, mobile: 310 },
-  { date: "2024-06-17", desktop: 475, mobile: 520 },
-  { date: "2024-06-18", desktop: 107, mobile: 170 },
-  { date: "2024-06-19", desktop: 341, mobile: 290 },
-  { date: "2024-06-20", desktop: 408, mobile: 450 },
-  { date: "2024-06-21", desktop: 169, mobile: 210 },
-  { date: "2024-06-22", desktop: 317, mobile: 270 },
-  { date: "2024-06-23", desktop: 480, mobile: 530 },
-  { date: "2024-06-24", desktop: 132, mobile: 180 },
-  { date: "2024-06-25", desktop: 141, mobile: 190 },
-  { date: "2024-06-26", desktop: 434, mobile: 380 },
-  { date: "2024-06-27", desktop: 448, mobile: 490 },
-  { date: "2024-06-28", desktop: 149, mobile: 200 },
-  { date: "2024-06-29", desktop: 103, mobile: 160 },
-  { date: "2024-06-30", desktop: 446, mobile: 400 },
+  { date: "2024-04-01", revenus: 12500, factures: 8 },
+  { date: "2024-04-02", revenus: 8500, factures: 5 },
+  { date: "2024-04-03", revenus: 15200, factures: 12 },
+  { date: "2024-04-04", revenus: 9800, factures: 7 },
+  { date: "2024-04-05", revenus: 18700, factures: 15 },
+  { date: "2024-04-06", revenus: 22100, factures: 18 },
+  { date: "2024-04-07", revenus: 14300, factures: 11 },
+  { date: "2024-04-08", revenus: 25600, factures: 20 },
+  { date: "2024-04-09", revenus: 7200, factures: 6 },
+  { date: "2024-04-10", revenus: 16800, factures: 13 },
+  { date: "2024-04-11", revenus: 19400, factures: 16 },
+  { date: "2024-04-12", revenus: 17600, factures: 14 },
+  { date: "2024-04-13", revenus: 20300, factures: 17 },
+  { date: "2024-04-14", revenus: 11200, factures: 9 },
+  { date: "2024-04-15", revenus: 9800, factures: 8 },
+  { date: "2024-04-16", revenus: 13400, factures: 10 },
+  { date: "2024-04-17", revenus: 26800, factures: 22 },
+  { date: "2024-04-18", revenus: 21900, factures: 18 },
+  { date: "2024-04-19", revenus: 14600, factures: 12 },
+  { date: "2024-04-20", revenus: 8900, factures: 7 },
+  { date: "2024-04-21", revenus: 13200, factures: 10 },
+  { date: "2024-04-22", revenus: 16800, factures: 13 },
+  { date: "2024-04-23", revenus: 13400, factures: 11 },
+  { date: "2024-04-24", revenus: 23200, factures: 19 },
+  { date: "2024-04-25", revenus: 15600, factures: 12 },
+  { date: "2024-04-26", revenus: 7200, factures: 6 },
+  { date: "2024-04-27", revenus: 23000, factures: 19 },
+  { date: "2024-04-28", revenus: 9800, factures: 8 },
+  { date: "2024-04-29", revenus: 18900, factures: 15 },
+  { date: "2024-04-30", revenus: 27200, factures: 23 },
+  { date: "2024-05-01", revenus: 13200, factures: 10 },
+  { date: "2024-05-02", revenus: 17600, factures: 14 },
+  { date: "2024-05-03", revenus: 14800, factures: 12 },
+  { date: "2024-05-04", revenus: 23100, factures: 19 },
+  { date: "2024-05-05", revenus: 28900, factures: 24 },
+  { date: "2024-05-06", revenus: 29900, factures: 25 },
+  { date: "2024-05-07", revenus: 23300, factures: 19 },
+  { date: "2024-05-08", revenus: 11200, factures: 9 },
+  { date: "2024-05-09", revenus: 15600, factures: 12 },
+  { date: "2024-05-10", revenus: 17600, factures: 14 },
+  { date: "2024-05-11", revenus: 20100, factures: 16 },
+  { date: "2024-05-12", revenus: 13400, factures: 11 },
+  { date: "2024-05-13", revenus: 13400, factures: 11 },
+  { date: "2024-05-14", revenus: 26900, factures: 22 },
+  { date: "2024-05-15", revenus: 28400, factures: 23 },
+  { date: "2024-05-16", revenus: 20300, factures: 17 },
+  { date: "2024-05-17", revenus: 29900, factures: 25 },
+  { date: "2024-05-18", revenus: 18900, factures: 15 },
+  { date: "2024-05-19", revenus: 14100, factures: 11 },
+  { date: "2024-05-20", revenus: 13200, factures: 10 },
+  { date: "2024-05-21", revenus: 7200, factures: 6 },
+  { date: "2024-05-22", revenus: 7200, factures: 6 },
+  { date: "2024-05-23", revenus: 17600, factures: 14 },
+  { date: "2024-05-24", revenus: 18900, factures: 15 },
+  { date: "2024-05-25", revenus: 15600, factures: 12 },
+  { date: "2024-05-26", revenus: 16800, factures: 13 },
+  { date: "2024-05-27", revenus: 25200, factures: 21 },
+  { date: "2024-05-28", revenus: 16800, factures: 13 },
+  { date: "2024-05-29", revenus: 7200, factures: 6 },
+  { date: "2024-05-30", revenus: 20400, factures: 17 },
+  { date: "2024-05-31", revenus: 13200, factures: 10 },
+  { date: "2024-06-01", revenus: 13200, factures: 10 },
+  { date: "2024-06-02", revenus: 28200, factures: 23 },
+  { date: "2024-06-03", revenus: 7200, factures: 6 },
+  { date: "2024-06-04", revenus: 26300, factures: 22 },
+  { date: "2024-06-05", revenus: 7200, factures: 6 },
+  { date: "2024-06-06", revenus: 17600, factures: 14 },
+  { date: "2024-06-07", revenus: 19400, factures: 16 },
+  { date: "2024-06-08", revenus: 23100, factures: 19 },
+  { date: "2024-06-09", revenus: 26300, factures: 22 },
+  { date: "2024-06-10", revenus: 11200, factures: 9 },
+  { date: "2024-06-11", revenus: 7200, factures: 6 },
+  { date: "2024-06-12", revenus: 29500, factures: 24 },
+  { date: "2024-06-13", revenus: 7200, factures: 6 },
+  { date: "2024-06-14", revenus: 25600, factures: 21 },
+  { date: "2024-06-15", revenus: 18400, factures: 15 },
+  { date: "2024-06-16", revenus: 22200, factures: 18 },
+  { date: "2024-06-17", revenus: 28500, factures: 24 },
+  { date: "2024-06-18", revenus: 7200, factures: 6 },
+  { date: "2024-06-19", revenus: 20400, factures: 17 },
+  { date: "2024-06-20", revenus: 24500, factures: 20 },
+  { date: "2024-06-21", revenus: 11200, factures: 9 },
+  { date: "2024-06-22", revenus: 19000, factures: 16 },
+  { date: "2024-06-23", revenus: 28800, factures: 24 },
+  { date: "2024-06-24", revenus: 9800, factures: 8 },
+  { date: "2024-06-25", revenus: 11200, factures: 9 },
+  { date: "2024-06-26", revenus: 26000, factures: 22 },
+  { date: "2024-06-27", revenus: 26900, factures: 23 },
+  { date: "2024-06-28", revenus: 11200, factures: 9 },
+  { date: "2024-06-29", revenus: 7200, factures: 6 },
+  { date: "2024-06-30", revenus: 26800, factures: 22 },
 ]
 
 const chartConfig = {
-  visitors: {
-    label: "Visitors",
-  },
-  desktop: {
-    label: "Desktop",
+  revenus: {
+    label: "Revenus",
     color: "var(--primary)",
   },
-  mobile: {
-    label: "Mobile",
-    color: "var(--primary)",
+  factures: {
+    label: "Factures",
+    color: "var(--chart-2)",
   },
 } satisfies ChartConfig
 
@@ -167,12 +164,12 @@ export function ChartAreaInteractive() {
   return (
     <Card className="@container/card">
       <CardHeader>
-        <CardTitle>Total Visitors</CardTitle>
+        <CardTitle>Revenus & Factures</CardTitle>
         <CardDescription>
           <span className="hidden @[540px]/card:block">
-            Total for the last 3 months
+            Évolution des revenus et factures sur 3 mois
           </span>
-          <span className="@[540px]/card:hidden">Last 3 months</span>
+          <span className="@[540px]/card:hidden">3 derniers mois</span>
         </CardDescription>
         <CardAction>
           <ToggleGroup
@@ -182,9 +179,9 @@ export function ChartAreaInteractive() {
             variant="outline"
             className="hidden *:data-[slot=toggle-group-item]:!px-4 @[767px]/card:flex"
           >
-            <ToggleGroupItem value="90d">Last 3 months</ToggleGroupItem>
-            <ToggleGroupItem value="30d">Last 30 days</ToggleGroupItem>
-            <ToggleGroupItem value="7d">Last 7 days</ToggleGroupItem>
+            <ToggleGroupItem value="90d">3 derniers mois</ToggleGroupItem>
+            <ToggleGroupItem value="30d">30 derniers jours</ToggleGroupItem>
+            <ToggleGroupItem value="7d">7 derniers jours</ToggleGroupItem>
           </ToggleGroup>
           <Select value={timeRange} onValueChange={setTimeRange}>
             <SelectTrigger
@@ -192,17 +189,17 @@ export function ChartAreaInteractive() {
               size="sm"
               aria-label="Select a value"
             >
-              <SelectValue placeholder="Last 3 months" />
+              <SelectValue placeholder="3 derniers mois" />
             </SelectTrigger>
             <SelectContent className="rounded-xl">
               <SelectItem value="90d" className="rounded-lg">
-                Last 3 months
+                3 derniers mois
               </SelectItem>
               <SelectItem value="30d" className="rounded-lg">
-                Last 30 days
+                30 derniers jours
               </SelectItem>
               <SelectItem value="7d" className="rounded-lg">
-                Last 7 days
+                7 derniers jours
               </SelectItem>
             </SelectContent>
           </Select>
@@ -215,27 +212,27 @@ export function ChartAreaInteractive() {
         >
           <AreaChart data={filteredData}>
             <defs>
-              <linearGradient id="fillDesktop" x1="0" y1="0" x2="0" y2="1">
+              <linearGradient id="fillRevenus" x1="0" y1="0" x2="0" y2="1">
                 <stop
                   offset="5%"
-                  stopColor="var(--color-desktop)"
+                  stopColor="var(--color-revenus)"
                   stopOpacity={1.0}
                 />
                 <stop
                   offset="95%"
-                  stopColor="var(--color-desktop)"
+                  stopColor="var(--color-revenus)"
                   stopOpacity={0.1}
                 />
               </linearGradient>
-              <linearGradient id="fillMobile" x1="0" y1="0" x2="0" y2="1">
+              <linearGradient id="fillFactures" x1="0" y1="0" x2="0" y2="1">
                 <stop
                   offset="5%"
-                  stopColor="var(--color-mobile)"
+                  stopColor="var(--color-factures)"
                   stopOpacity={0.8}
                 />
                 <stop
                   offset="95%"
-                  stopColor="var(--color-mobile)"
+                  stopColor="var(--color-factures)"
                   stopOpacity={0.1}
                 />
               </linearGradient>
@@ -270,17 +267,17 @@ export function ChartAreaInteractive() {
               }
             />
             <Area
-              dataKey="mobile"
+              dataKey="factures"
               type="natural"
-              fill="url(#fillMobile)"
-              stroke="var(--color-mobile)"
+              fill="url(#fillFactures)"
+              stroke="var(--color-factures)"
               stackId="a"
             />
             <Area
-              dataKey="desktop"
+              dataKey="revenus"
               type="natural"
-              fill="url(#fillDesktop)"
-              stroke="var(--color-desktop)"
+              fill="url(#fillRevenus)"
+              stroke="var(--color-revenus)"
               stackId="a"
             />
           </AreaChart>
