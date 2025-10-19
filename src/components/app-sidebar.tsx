@@ -2,21 +2,20 @@
 
 import * as React from "react"
 import {
-  IconCamera,
   IconChartBar,
   IconDashboard,
-  IconDatabase,
-  IconFileAi,
-  IconFileDescription,
-  IconFileWord,
-  IconFolder,
+  IconFileInvoice,
   IconHelp,
   IconInnerShadowTop,
   IconListDetails,
+  IconPackage,
   IconReport,
   IconSearch,
   IconSettings,
   IconUsers,
+  IconWallet,
+  IconReceipt,
+  IconTrendingUp,
 } from "@tabler/icons-react"
 
 import { NavDocuments } from "@/components/nav-documents"
@@ -35,117 +34,110 @@ import {
 
 const data = {
   user: {
-    name: "shadcn",
-    email: "m@example.com",
-    avatar: "/avatars/shadcn.jpg",
+    name: "Admin",
+    email: "admin@bluniqo.com",
+    avatar: "/avatars/admin.jpg",
   },
   navMain: [
     {
       title: "Dashboard",
-      url: "#",
+      url: "/dashboard",
       icon: IconDashboard,
     },
     {
-      title: "Lifecycle",
-      url: "#",
-      icon: IconListDetails,
+      title: "Factures",
+      url: "/invoices",
+      icon: IconFileInvoice,
     },
     {
-      title: "Analytics",
-      url: "#",
-      icon: IconChartBar,
-    },
-    {
-      title: "Projects",
-      url: "#",
-      icon: IconFolder,
-    },
-    {
-      title: "Team",
-      url: "#",
+      title: "Clients",
+      url: "/clients",
       icon: IconUsers,
+    },
+    {
+      title: "Articles",
+      url: "/items",
+      icon: IconPackage,
+    },
+    {
+      title: "Paiements",
+      url: "/payments",
+      icon: IconWallet,
     },
   ],
   navClouds: [
     {
-      title: "Capture",
-      icon: IconCamera,
+      title: "Facturation",
+      icon: IconReceipt,
       isActive: true,
       url: "#",
       items: [
         {
-          title: "Active Proposals",
-          url: "#",
+          title: "Nouvelle Facture",
+          url: "/invoices/new",
         },
         {
-          title: "Archived",
-          url: "#",
-        },
-      ],
-    },
-    {
-      title: "Proposal",
-      icon: IconFileDescription,
-      url: "#",
-      items: [
-        {
-          title: "Active Proposals",
-          url: "#",
+          title: "Devis",
+          url: "/quotes",
         },
         {
-          title: "Archived",
-          url: "#",
+          title: "Templates",
+          url: "/templates",
         },
       ],
     },
     {
-      title: "Prompts",
-      icon: IconFileAi,
+      title: "Rapports",
+      icon: IconTrendingUp,
       url: "#",
       items: [
         {
-          title: "Active Proposals",
-          url: "#",
+          title: "Revenus",
+          url: "/reports/revenue",
         },
         {
-          title: "Archived",
-          url: "#",
+          title: "Clients",
+          url: "/reports/clients",
+        },
+        {
+          title: "Produits",
+          url: "/reports/products",
         },
       ],
     },
   ],
   navSecondary: [
     {
-      title: "Settings",
-      url: "#",
+      title: "Paramètres",
+      url: "/settings",
       icon: IconSettings,
     },
     {
-      title: "Get Help",
-      url: "#",
+      title: "Aide",
+      url: "/help",
       icon: IconHelp,
     },
     {
-      title: "Search",
+      title: "Recherche",
       url: "#",
       icon: IconSearch,
     },
   ],
   documents: [
     {
-      name: "Data Library",
-      url: "#",
-      icon: IconDatabase,
+      name: "Analytics",
+      url: "/analytics",
+      icon: IconChartBar,
     },
     {
-      name: "Reports",
-      url: "#",
+      name: "Rapports",
+      url: "/reports",
       icon: IconReport,
     },
     {
-      name: "Word Assistant",
-      url: "#",
-      icon: IconFileWord,
+      name: "Historique",
+      url: "/history",
+      icon: IconListDetails,
     },
   ],
 }
@@ -160,9 +152,9 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
               asChild
               className="data-[slot=sidebar-menu-button]:!p-1.5"
             >
-              <a href="#">
+              <a href="/dashboard">
                 <IconInnerShadowTop className="!size-5" />
-                <span className="text-base font-semibold">Acme Inc.</span>
+                <span className="text-base font-semibold">Bluniqo</span>
               </a>
             </SidebarMenuButton>
           </SidebarMenuItem>
@@ -179,3 +171,4 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
     </Sidebar>
   )
 }
+
